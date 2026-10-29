@@ -22,6 +22,14 @@ while True:
         for item in expenses:
             total+=item["amount"]
         print("Total: ", total)
+        category_totals = {}
+        for item in expenses:
+            if item["category"] in category_totals:
+                category_totals[item["category"]] += item["amount"]
+            else:
+                category_totals[item["category"]] = item["amount"]
+        for category in category_totals:
+            print(category, ":", category_totals[category])
     elif choice == "4":
         print("Goodbye!")
         break

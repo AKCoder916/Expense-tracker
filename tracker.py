@@ -1,9 +1,11 @@
 expenses = []
+total = 0
 
 while True:
     print("1) Add Expenses")
     print("2) List Expenses")
-    print("3) Quit")
+    print("3) Show Total Expenses")
+    print("4) Quit")
 
     choice = input("> ")
 
@@ -17,7 +19,11 @@ while True:
         for item in expenses:
             print(item["amount"], "-", item["category"])
     elif choice == "3":
+        for item in expenses:
+            total+=item["amount"]
+        print("Total: ", total)
+    elif choice == "4":
         print("Goodbye!")
         break
     else:
-        print("Not built yet!")
+        print("Invalid choice, try again.")

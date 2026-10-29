@@ -1,5 +1,4 @@
 expenses = []
-total = 0
 
 while True:
     print("1) Add Expenses")
@@ -19,6 +18,7 @@ while True:
         for item in expenses:
             print(item["amount"], "-", item["category"])
     elif choice == "3":
+        total = 0
         for item in expenses:
             total+=item["amount"]
         print("Total: ", total)

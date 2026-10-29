@@ -13,6 +13,9 @@ while True:
         expense = {"amount": amount, "category": category}
         expenses.append(expense)
         print("Added expense:", expense)
+    elif choice == "2":
+        for item in expenses:
+            print(item["amount"], "-", item["category"])
     elif choice == "3":
         print("Goodbye!")
         break
